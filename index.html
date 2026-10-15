@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Punya Pradeep, Lead Technical Writer: documentation leadership, AI documentation systems, and product ownership of Help AI and Web Reviewer.">
+<meta property="og:title" content="Punya Pradeep">
+<meta property="og:description" content="Lead Technical Writer: documentation leadership, AI documentation systems, and product ownership.">
+<meta property="og:type" content="website">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Punya Pradeep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a consultant-style profile. Sticky name bar, a summary block, case studies in Challenge / Approach / Outcome columns, then reference sections (skills, experience, credentials). */
+:root{
+  --bg:#f4f6f8; --surface:#ffffff; --fg:#172230; --muted:#5b6878; --line:#dde3ea;
+  --accent:#1f4e79; --accent-soft:#e6eef6; --metric:#1f4e79;
+  --display:"Libre Franklin", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f151c; --surface:#161f29; --fg:#e5ebf1; --muted:#97a4b2; --line:#26323f;
+  --accent:#7fb2e5; --accent-soft:#1b2c3d; --metric:#9cc5ee; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f151c; --surface:#161f29; --fg:#e5ebf1; --muted:#97a4b2; --line:#26323f;
+  --accent:#7fb2e5; --accent-soft:#1b2c3d; --metric:#9cc5ee; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1rem;line-height:1.6}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2;letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.gutter{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.inner{max-width:1040px;margin:0 auto}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top, 0px);z-index:10;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar .inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-block:12px}
+.bar strong{font-family:var(--display);font-weight:700;font-size:1rem}
+.bar nav{display:flex;flex-wrap:wrap;gap:4px 20px;font-size:.9rem}
+.bar nav a{color:var(--muted);text-decoration:none}
+.bar nav a:hover{color:var(--accent)}
+
+main .inner{display:flex;flex-direction:column;gap:72px;padding-block:56px 80px}
+.label{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+section{display:flex;flex-direction:column;gap:28px;scroll-margin-top:72px}
+section > header{display:flex;flex-direction:column;gap:8px;max-width:680px}
+section > header h2{font-size:1.75rem;font-weight:700}
+section > header p{color:var(--muted)}
+
+/* intro */
+.intro{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px;align-items:start}
+.intro h1{font-size:clamp(2.2rem,5.5vw,3.25rem);font-weight:700}
+.intro .title{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--accent);margin-top:8px}
+.intro .summary{margin-top:20px;font-size:1.08rem;max-width:62ch}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:14px;font-size:.92rem}
+.facts div{display:flex;flex-direction:column;gap:2px}
+.facts dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.facts dl{margin:0;display:flex;flex-direction:column;gap:14px}
+.facts dd{margin:0;overflow-wrap:anywhere}
+@media (max-width:760px){.intro{grid-template-columns:1fr}}
+
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.metric{padding:20px 20px 20px 0;display:flex;flex-direction:column;gap:6px}
+.metric + .metric{padding-left:20px;border-left:1px solid var(--line)}
+.metric b{font-family:var(--display);font-weight:700;font-size:1.65rem;color:var(--metric);font-variant-numeric:tabular-nums;line-height:1.1}
+.metric span{font-size:.88rem;color:var(--muted);line-height:1.4}
+@media (max-width:760px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metric:nth-child(3){padding-left:0;border-left:0}.metric:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* case studies */
+.case{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:28px;display:flex;flex-direction:column;gap:20px}
+.case-head{display:flex;flex-direction:column;gap:6px}
+.case-head h3{font-size:1.35rem;font-weight:700}
+.role{font-size:.9rem;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.cols h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;font-weight:500}
+.cols p,.cols li{font-size:.95rem}
+.cols ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px}
+.outcome p{font-family:var(--display);font-weight:600;color:var(--metric);font-size:1.02rem}
+@media (max-width:760px){.cols{grid-template-columns:1fr;gap:16px}.case{padding:20px}}
+.tags{display:flex;flex-wrap:wrap;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+.tag{font-family:var(--mono);font-size:.74rem;padding:3px 9px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+.flow-box{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--bg);padding:14px}
+.flow{display:flex;align-items:center;gap:8px;min-width:max-content;font-size:.8rem}
+.flow .step{border:1px solid var(--line);border-radius:4px;padding:8px 10px;background:var(--surface);display:flex;flex-direction:column;gap:2px;font-weight:500}
+.flow .step small{color:var(--muted);font-weight:400;font-size:.72rem}
+.flow .arrow{color:var(--accent)}
+.flow-cap{font-size:.82rem;color:var(--muted);margin-top:10px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.skill{background:var(--surface);padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.skill h3{font-size:.98rem;font-weight:600}
+.skill p{font-size:.9rem;color:var(--muted)}
+
+/* experience */
+.xp{display:flex;flex-direction:column}
+.job{display:grid;grid-template-columns:180px minmax(0,1fr);gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+.job:last-child{border-bottom:1px solid var(--line)}
+.job .when{font-family:var(--mono);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
+.job h3{font-size:1.02rem;font-weight:600}
+.job .org{color:var(--accent);font-weight:500}
+.job p{font-size:.92rem;color:var(--muted);margin-top:4px}
+@media (max-width:600px){.job{grid-template-columns:1fr;gap:4px}}
+
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.panel h3{font-size:1.1rem;font-weight:700}
+.panel ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px;font-size:.94rem}
+
+/* contact */
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.contact code{font-family:var(--mono);font-size:.95rem;user-select:all;background:var(--surface);border:1px solid var(--line);color:var(--fg);padding:8px 12px;border-radius:6px;overflow-wrap:anywhere}
+button{font:600 .88rem var(--display);border:1px solid var(--accent);color:#fff;background:var(--accent);border-radius:6px;padding:8px 14px;cursor:pointer}
+:root[data-theme="dark"] button{color:var(--bg)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) button{color:var(--bg)}}
+button:hover{filter:brightness(1.08)}
+.status{font-size:.85rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+footer .inner{padding-block:20px}
+</style>
+</head>
+<body>
+
+<div class="bar gutter">
+  <div class="inner">
+    <strong>Punya Pradeep</strong>
+    <nav aria-label="Sections"><a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+  </div>
+</div>
+
+<main class="gutter">
+<div class="inner">
+
+<div class="intro">
+  <div>
+    <p class="label">Lead Technical Writer</p>
+    <h1>Punya Pradeep</h1>
+    <p class="title">Documentation leadership · Product owner for Help AI and Web Reviewer · AI documentation systems</p>
+    <p class="summary">I lead a 7-writer documentation team at ServiceMax, a PTC Technology, and build the AI systems behind our documentation: agents that cut drafting time, an AI help assistant on our public product portals, and an online review tool I built in-house instead of buying a vendor solution.</p>
+  </div>
+  <aside class="facts" aria-label="At a glance">
+    <dl>
+      <div><dt>Current role</dt><dd>Staff Technical Writer, ServiceMax (PTC)</dd></div>
+      <div><dt>Experience</dt><dd>15+ years, enterprise software</dd></div>
+      <div><dt>Based in</dt><dd>Bengaluru, India</dd></div>
+      <div><dt>Contact</dt><dd>pradeep.punya@live.com<br><a href="https://www.linkedin.com/in/punya-pradeep/" target="_blank" rel="noopener">linkedin.com/in/punya-pradeep</a></dd></div>
+    </dl>
+  </aside>
+</div>
+
+<div class="metrics" role="list" aria-label="Key results">
+  <div class="metric" role="listitem"><b>7 writers</b><span>led as the team's sole lead</span></div>
+  <div class="metric" role="listitem"><b>1 week → 1 day</b><span>feature drafting time with AI agents</span></div>
+  <div class="metric" role="listitem"><b>15% fewer</b><span>support tickets within 6 months of Help AI</span></div>
+  <div class="metric" role="listitem"><b>$10,000</b><span>in yearly vendor costs avoided with Web Reviewer</span></div>
+</div>
+
+<section id="work" aria-labelledby="work-h">
+  <header>
+    <p class="label">Selected work</p>
+    <h2 id="work-h">Case studies</h2>
+    <p>Work from my current role at ServiceMax, a PTC Technology.</p>
+  </header>
+
+  <article class="case">
+    <div class="case-head">
+      <h3>Help AI: enterprise RAG help assistant</h3>
+      <p class="role">Product owner and architect · Live on 3 public product portals</p>
+    </div>
+    <div class="cols">
+      <div><h4>Challenge</h4><p>Customers searching product documentation needed direct answers, not a list of links, and often filed support tickets instead.</p></div>
+      <div><h4>What I did</h4><ul><li>Took it from idea to release: ideated, planned, implemented, and rolled it out to users.</li><li>Own the feature roadmap and the order in which products receive Help AI.</li><li>Designed the retrieval and answer architecture.</li><li>Secured it for enterprise use with Wiz and Black Duck scans, penetration testing, and UAT.</li></ul></div>
+      <div class="outcome"><h4>Outcome</h4><p>Support tickets fell 15% within 6 months of rollout.</p></div>
+    </div>
+    <div class="flow-box" role="figure" aria-label="Help AI conversation pipeline">
+      <div class="flow">
+        <div class="step">User question<small>Portal chat</small></div><span class="arrow">→</span>
+        <div class="step">Intent detection<small>Azure OpenAI</small></div><span class="arrow">→</span>
+        <div class="step">Retrieval<small>Pinecone hybrid search</small></div><span class="arrow">→</span>
+        <div class="step">Fallback search<small>When retrieval is thin</small></div><span class="arrow">→</span>
+        <div class="step">Answer generation<small>Azure OpenAI</small></div><span class="arrow">→</span>
+        <div class="step">Conversation saved<small>For follow-ups</small></div>
+      </div>
+      <p class="flow-cap">Orchestrated with LangGraph, with LangChain integrations, served on Flask.</p>
+    </div>
+    <div class="tags"><span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">Pinecone</span><span class="tag">Azure OpenAI</span><span class="tag">Flask</span><span class="tag">Wiz</span><span class="tag">Black Duck</span><span class="tag">Product ownership</span><span class="tag">Product roadmap</span></div>
+  </article>
+
+  <article class="case">
+    <div class="case-head">
+      <h3>AI agents for documentation drafting</h3>
+      <p class="role">Builder and sole maintainer · 3 products, 10 releases a year</p>
+    </div>
+    <div class="cols">
+      <div><h4>Challenge</h4><p>Drafting the documentation for a single feature took a writer about a week.</p></div>
+      <div><h4>What I did</h4><ul><li>Built automation agents for release notes and feature documentation.</li><li>Developed orchestrated subagents and skills the whole team uses each release.</li><li>Connected them through MCP to Jira, Salesforce, GitHub, and Figma to validate drafts automatically.</li></ul></div>
+      <div class="outcome"><h4>Outcome</h4><p>Drafting time dropped from one week to one day per feature.</p></div>
+    </div>
+    <div class="tags"><span class="tag">AI agents</span><span class="tag">MCP</span><span class="tag">Jira</span><span class="tag">Salesforce</span><span class="tag">GitHub</span><span class="tag">Figma</span></div>
+  </article>
+
+  <article class="case">
+    <div class="case-head">
+      <h3>Web Reviewer: online documentation review</h3>
+      <p class="role">Product owner and sole developer · Used by internal stakeholders</p>
+    </div>
+    <div class="cols">
+      <div><h4>Challenge</h4><p>Stakeholders reviewed documentation offline in Word files on OneDrive. The external vendor solutions we evaluated would have cost $10,000 a year.</p></div>
+      <div><h4>What I did</h4><ul><li>Ideated, planned, and built a Node.js app so internal stakeholders review the published pages online.</li><li>Scaled and deployed it with the network and security teams, then rolled it out with an org-wide demo.</li><li>Maintain its feature roadmap.</li></ul></div>
+      <div class="outcome"><h4>Outcome</h4><p>Built in-house instead, avoiding $10,000 a year in vendor costs.</p></div>
+    </div>
+    <div class="tags"><span class="tag">Node.js</span><span class="tag">Product ownership</span><span class="tag">Internal stakeholders</span></div>
+  </article>
+
+  <article class="case">
+    <div class="case-head">
+      <h3>Leading the documentation team</h3>
+      <p class="role">Sole lead of 7 writers · 3 products</p>
+    </div>
+    <div class="cols">
+      <div><h4>Scope</h4><p>User guides, admin guides, API guides, and release notes for 3 Field Service Management products.</p></div>
+      <div><h4>What I do</h4><ul><li>Distribute workload and review every writer's deliverables.</li><li>Shortlist, interview, onboard, mentor, and train writers.</li><li>Set the information architecture, authored in DITA with Arbortext Editor and Git.</li></ul></div>
+      <div class="outcome"><h4>Earlier</h4><p>Built and published a complete public documentation portal for a new product from scratch.</p></div>
+    </div>
+    <div class="tags"><span class="tag">DITA</span><span class="tag">Arbortext Editor</span><span class="tag">Git</span><span class="tag">Information architecture</span><span class="tag">Hiring</span></div>
+  </article>
+</section>
+
+<section id="skills" aria-labelledby="skills-h">
+  <header><p class="label">Capabilities</p><h2 id="skills-h">Skills</h2></header>
+  <div class="skills">
+    <div class="skill"><h3>Documentation</h3><p>DITA, Arbortext Editor, ClickHelp, Git, information architecture, user, admin and API guides, release notes, documentation portals</p></div>
+    <div class="skill"><h3>Leadership</h3><p>Team leadership, hiring and onboarding, writer training, content review</p></div>
+    <div class="skill"><h3>Product management</h3><p>End-to-end product ownership from idea to rollout, feature roadmap planning, prioritization, deployment sequencing</p></div>
+    <div class="skill"><h3>AI and retrieval</h3><p>RAG, LangGraph, LangChain, Pinecone hybrid and semantic search, Azure OpenAI, AI agents and subagents, MCP integrations</p></div>
+    <div class="skill"><h3>Enterprise security</h3><p>Wiz and Black Duck vulnerability scanning, penetration testing, user acceptance testing</p></div>
+    <div class="skill"><h3>Development</h3><p>Node.js, Flask, iOS app development</p></div>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="xp-h">
+  <header><p class="label">Career</p><h2 id="xp-h">Experience</h2></header>
+  <div class="xp">
+    <div class="job"><span class="when">May 2022 – Present</span><div><h3>Staff Technical Writer · <span class="org">ServiceMax, a PTC Technology</span></h3><p>Team lead, product owner for Help AI and Web Reviewer, AI documentation tooling.</p></div></div>
+    <div class="job"><span class="when">May 2020 – May 2022</span><div><h3>Senior Technical Writer · <span class="org">ServiceMax</span></h3><p>Built a public documentation portal for a new product.</p></div></div>
+    <div class="job"><span class="when">Aug 2019 – Apr 2020</span><div><h3>Senior Technical Writer · <span class="org">HotelHub</span></h3><p>User and admin guides for software products.</p></div></div>
+    <div class="job"><span class="when">Aug 2016 – Aug 2019</span><div><h3>Business Change Specialist · <span class="org">Vodafone Enterprise</span></h3><p>Assistant Manager, then Deputy Manager. Documented and optimized business processes.</p></div></div>
+    <div class="job"><span class="when">Jun 2015 – Aug 2016</span><div><h3>Senior Technical Writer · <span class="org">Cisco</span></h3><p>User and admin guides for software products.</p></div></div>
+    <div class="job"><span class="when">Nov 2014 – May 2015</span><div><h3>Senior Technical Writer · <span class="org">NetApp</span></h3><p>User and admin guides for software products.</p></div></div>
+    <div class="job"><span class="when">Jan 2011 – Oct 2014</span><div><h3>Technical Author, Senior Technical Author · <span class="org">ALTEN India</span></h3><p>User and admin guides. Selected as the first team member sent onsite to Romania for a project handover to India.</p></div></div>
+    <div class="job"><span class="when">Apr 2009 – Sep 2009</span><div><h3>Technical Trainee · <span class="org">National Aerospace Laboratories</span></h3><p>Testing and documentation for SARAS prototype aircraft systems.</p></div></div>
+  </div>
+</section>
+
+<section aria-labelledby="more-h">
+  <header><p class="label">Beyond the CV</p><h2 id="more-h">Independent work and credentials</h2></header>
+  <div class="two">
+    <div class="panel"><h3>iOS apps</h3><p>I design, build, and publish my own iOS apps on Apple's App Store.</p></div>
+    <div class="panel"><h3>Certifications and education</h3><ul><li>Agentic AI Architecture Foundations: Designing Autonomous AI Systems</li><li>Introduction to LLM Vulnerabilities</li><li>Cybersecurity Awareness: AI</li><li>Python</li><li>Field Service University</li><li>Engineer's Degree, Airframe Mechanics and Aircraft Maintenance Technology, U.A.E. Bhubaneswar</li></ul></div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-h">
+  <header><p class="label">Contact</p><h2 id="contact-h">Get in touch</h2><p>Open to conversations about documentation leadership and AI documentation roles.</p></header>
+  <div class="contact"><code id="email">pradeep.punya@live.com</code><button type="button" id="copy-email">Copy email</button><span id="copy-status" class="status" aria-live="polite"></span></div>
+  <p><a href="https://www.linkedin.com/in/punya-pradeep/" target="_blank" rel="noopener">linkedin.com/in/punya-pradeep</a></p>
+</section>
+
+</div>
+</main>
+
+<footer class="gutter"><div class="inner">© 2026 Punya Pradeep</div></footer>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function(){
+  var s=document.getElementById('copy-status'), t=document.getElementById('email');
+  function sel(){var r=document.createRange();r.selectNodeContents(t);var g=getSelection();g.removeAllRanges();g.addRange(r);s.textContent='Selected. Press Ctrl+C or Cmd+C to copy.';}
+  try{navigator.clipboard.writeText(t.textContent).then(function(){s.textContent='Copied';},sel);}catch(e){sel();}
+});
+</script>
+
+</body>
+</html>
